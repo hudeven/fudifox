@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FudiFox - Powerful macOS Productivity App</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="nav-container">
+                <div class="logo">🦊 FudiFox</div>
+                <ul class="nav-links">
+                    <li><a href="#features">Features</a></li>
+                    <li><a href="#guide">User Guide</a></li>
+                    <li><a href="#shortcuts">Shortcuts</a></li>
+                    <li><a href="#support">Support</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container">
+                <h1>FudiFox</h1>
+                <p class="tagline">A powerful macOS productivity app with AI integration</p>
+                <p class="description">Fast search, custom workflows, and AI-powered automation at your fingertips</p>
+                <div class="cta-buttons">
+                    <a href="https://github.com/hudeven/fudifox/releases" class="btn btn-primary">Download</a>
+                    <a href="https://github.com/hudeven/fudifox" class="btn btn-secondary">View on GitHub</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section id="features" class="features">
+            <div class="container">
+                <h2>Features</h2>
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon">⚡</div>
+                        <h3>Lightning Fast Search</h3>
+                        <p>Spotlight-like interface with instant file, app, and workflow search. Press <kbd>⌘Space</kbd> to launch.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🤖</div>
+                        <h3>AI Integration</h3>
+                        <p>Built-in support for Claude and ChatGPT APIs with intelligent function calling and context-aware responses.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🔄</div>
+                        <h3>Custom Workflows</h3>
+                        <p>Create and automate complex multi-step workflows to streamline your daily tasks.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🔧</div>
+                        <h3>Developer Tools</h3>
+                        <p>GitHub search, Jira integration, system info, process management, and more built-in functions.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">📋</div>
+                        <h3>Clipboard Manager</h3>
+                        <p>Access your clipboard history instantly with <kbd>⌘P</kbd> and never lose copied content.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🎨</div>
+                        <h3>Extensible</h3>
+                        <p>Easy to add new search providers, AI functions, and customize to your workflow.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- User Guide Section -->
+        <section id="guide" class="guide">
+            <div class="container">
+                <h2>User Guide</h2>
+
+                <div class="guide-section">
+                    <h3>Installation</h3>
+                    <ol>
+                        <li>Download the latest release from <a href="https://github.com/hudeven/fudifox/releases">GitHub Releases</a></li>
+                        <li>Open the downloaded <code>.dmg</code> file</li>
+                        <li>Drag FudiFox to your Applications folder</li>
+                        <li>Launch FudiFox from Applications</li>
+                        <li>Grant necessary permissions when prompted (Accessibility, File System)</li>
+                    </ol>
+
+                    <div class="info-box">
+                        <strong>System Requirements:</strong>
+                        <ul>
+                            <li>macOS 13.0 (Ventura) or later</li>
+                            <li>Apple Silicon or Intel processor</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="guide-section">
+                    <h3>Basic Usage</h3>
+                    <ol>
+                        <li><strong>Launch FudiFox:</strong> Press <kbd>⌘Space</kbd> (customizable)</li>
+                        <li><strong>Search:</strong> Start typing to search files, apps, or workflows</li>
+                        <li><strong>Navigate:</strong> Use arrow keys ↑↓ to move through results</li>
+                        <li><strong>Execute:</strong> Press <kbd>Enter</kbd> to run the selected item</li>
+                        <li><strong>Quick Select:</strong> Press <kbd>⌘1</kbd>-<kbd>⌘9</kbd> to select items directly</li>
+                        <li><strong>Close:</strong> Press <kbd>Esc</kbd> to dismiss</li>
+                    </ol>
+                </div>
+
+                <div class="guide-section">
+                    <h3>AI Features</h3>
+                    <p>Prefix your query with <code>?</code> or <code>ai:</code> to use AI:</p>
+                    <div class="examples">
+                        <div class="example">
+                            <code>? What's the weather in San Francisco?</code>
+                        </div>
+                        <div class="example">
+                            <code>ai: Find Swift UI repositories on GitHub</code>
+                        </div>
+                        <div class="example">
+                            <code>? Create a Jira ticket for bug fix</code>
+                        </div>
+                    </div>
+
+                    <div class="info-box">
+                        <strong>Setup AI API Keys:</strong>
+                        <p>Add to your <code>~/.zshrc</code> or <code>~/.bash_profile</code>:</p>
+                        <pre>export CLAUDE_API_KEY="your_key_here"
+export OPENAI_API_KEY="your_key_here"</pre>
+                    </div>
+                </div>
+
+                <div class="guide-section">
+                    <h3>Built-in Functions</h3>
+                    <ul>
+                        <li><strong>github_search:</strong> Search repositories, issues, create PRs</li>
+                        <li><strong>jira_operations:</strong> Search and create Jira tickets</li>
+                        <li><strong>system_info:</strong> Hardware, memory, disk, process info</li>
+                        <li><strong>file_operations:</strong> List, search, and read files</li>
+                        <li><strong>process_management:</strong> List, find, and kill processes</li>
+                    </ul>
+                </div>
+
+                <div class="guide-section">
+                    <h3>Permissions</h3>
+                    <p>FudiFox requires the following macOS permissions to function properly:</p>
+                    <ul>
+                        <li><strong>Accessibility Access:</strong> For global keyboard shortcuts</li>
+                        <li><strong>File System Access:</strong> For file search functionality</li>
+                        <li><strong>Network Access:</strong> For AI API calls</li>
+                    </ul>
+                    <p>You'll be prompted to grant these when first launching the app. You can also manually grant them in System Settings → Privacy & Security.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Shortcuts Section -->
+        <section id="shortcuts" class="shortcuts">
+            <div class="container">
+                <h2>Keyboard Shortcuts</h2>
+
+                <div class="shortcuts-grid">
+                    <div class="shortcut-category">
+                        <h3>Global Shortcuts</h3>
+                        <table class="shortcuts-table">
+                            <tr>
+                                <td><kbd>⌘Space</kbd></td>
+                                <td>Launch FudiFox search</td>
+                            </tr>
+                            <tr>
+                                <td><kbd>⌘G</kbd></td>
+                                <td>Google search</td>
+                            </tr>
+                            <tr>
+                                <td><kbd>⌘F</kbd></td>
+                                <td>Ask AI</td>
+                            </tr>
+                            <tr>
+                                <td><kbd>⌘H</kbd></td>
+                                <td>Search history</td>
+                            </tr>
+                            <tr>
+                                <td><kbd>⌘P</kbd></td>
+                                <td>Clipboard history</td>
+                            </tr>
+                            <tr>
+                                <td><kbd>⌘,</kbd></td>
+                                <td>Open settings</td>
+                            </tr>
+                            <tr>
+                                <td><kbd>⌘Q</kbd></td>
+                                <td>Quit FudiFox</td>
+                            </tr>
+                        </table>
+                    </div>
+
+                    <div class="shortcut-category">
+                        <h3>In-App Navigation</h3>
+                        <table class="shortcuts-table">
+                            <tr>
+                                <td><kbd>↑</kbd> <kbd>↓</kbd></td>
+                                <td>Navigate results</td>
+                            </tr>
+                            <tr>
+                                <td><kbd>Enter</kbd></td>
+                                <td>Execute selected item</td>
+                            </tr>
+                            <tr>
+                                <td><kbd>⌘1</kbd>-<kbd>⌘9</kbd></td>
+                                <td>Quick select items 1-9</td>
+                            </tr>
+                            <tr>
+                                <td><kbd>Esc</kbd></td>
+                                <td>Close window</td>
+                            </tr>
+                            <tr>
+                                <td><kbd>⌘A</kbd></td>
+                                <td>Select all text</td>
+                            </tr>
+                            <tr>
+                                <td><kbd>⌘C</kbd></td>
+                                <td>Copy text</td>
+                            </tr>
+                            <tr>
+                                <td><kbd>⌘V</kbd></td>
+                                <td>Paste text</td>
+                            </tr>
+                            <tr>
+                                <td><kbd>⌘X</kbd></td>
+                                <td>Cut text</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+
+                <div class="info-box">
+                    <strong>Note:</strong> All shortcuts are customizable in FudiFox settings (<kbd>⌘,</kbd>)
+                </div>
+            </div>
+        </section>
+
+        <!-- Support Section -->
+        <section id="support" class="support">
+            <div class="container">
+                <h2>Support</h2>
+
+                <div class="support-grid">
+                    <div class="support-card">
+                        <div class="support-icon">🐛</div>
+                        <h3>Report Issues</h3>
+                        <p>Found a bug or have a feature request?</p>
+                        <a href="https://github.com/hudeven/fudifox/issues" class="btn btn-primary">GitHub Issues</a>
+                    </div>
+
+                    <div class="support-card">
+                        <div class="support-icon">📧</div>
+                        <h3>Email Support</h3>
+                        <p>Need help or have questions?</p>
+                        <a href="mailto:fudifox.app@gmail.com" class="btn btn-secondary">fudifox.app@gmail.com</a>
+                    </div>
+
+                    <div class="support-card">
+                        <div class="support-icon">📖</div>
+                        <h3>Documentation</h3>
+                        <p>Learn more about building from source</p>
+                        <a href="https://github.com/hudeven/fudifox" class="btn btn-secondary">View Documentation</a>
+                    </div>
+                </div>
+
+                <div class="faq">
+                    <h3>Frequently Asked Questions</h3>
+
+                    <div class="faq-item">
+                        <h4>How do I change the global shortcut?</h4>
+                        <p>Open FudiFox settings with <kbd>⌘,</kbd> and customize the global shortcut in the Shortcuts tab.</p>
+                    </div>
+
+                    <div class="faq-item">
+                        <h4>Where are workflows stored?</h4>
+                        <p>Workflows are stored in <code>~/Library/Application Support/FudiFox/workflows.json</code></p>
+                    </div>
+
+                    <div class="faq-item">
+                        <h4>Why aren't my keyboard shortcuts working?</h4>
+                        <p>Make sure you've granted Accessibility permissions to FudiFox in System Settings → Privacy & Security → Accessibility.</p>
+                    </div>
+
+                    <div class="faq-item">
+                        <h4>Can I use FudiFox without AI features?</h4>
+                        <p>Yes! All core search and workflow features work without AI. AI features are optional and only activated when you use the <code>?</code> or <code>ai:</code> prefix.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 FudiFox. Open source under MIT License.</p>
+            <div class="footer-links">
+                <a href="https://github.com/hudeven/fudifox">GitHub</a>
+                <a href="https://github.com/hudeven/fudifox/issues">Issues</a>
+                <a href="mailto:fudifox.app@gmail.com">Contact</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
