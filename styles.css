@@ -6,7 +6,7 @@
 }
 
 :root {
-    --primary-color: #FF6B35;
+    --primary-color: #F37022;
     --secondary-color: #004E89;
     --text-color: #1A1A1A;
     --text-light: #666;
@@ -54,6 +54,11 @@ header {
     color: var(--primary-color);
 }
 
+.big-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--primary-color);
+}
 .nav-links {
     display: flex;
     list-style: none;
