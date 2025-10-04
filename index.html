@@ -99,6 +99,48 @@
                             <li>Apple Silicon or Intel processor</li>
                         </ul>
                     </div>
+
+                    <div class="info-box warning">
+                        <strong>⚠️ Security Notice - First Launch</strong>
+                        <p>FudiFox is currently not code-signed with an Apple Developer ID. macOS Gatekeeper may show a security warning or display <strong>"FudiFox is damaged and can't be opened. You should move it to the Trash."</strong></p>
+                        <p><strong>This is NOT because the app is actually damaged</strong> - it's a security measure by macOS for unsigned apps.</p>
+
+                        <h4>Solution 1: Remove Quarantine Attribute (Recommended)</h4>
+                        <p>Run this command in Terminal to allow FudiFox to run:</p>
+                        <pre>xattr -cr /Applications/FudiFox.app</pre>
+                        <p>Then launch FudiFox normally from Applications or Spotlight.</p>
+
+                        <h4>Solution 2: Manual Security Override</h4>
+                        <ol>
+                            <li><strong>First attempt</strong> - Right-click method:
+                                <ul>
+                                    <li>Right-click on FudiFox.app in Finder</li>
+                                    <li>Select "Open" from the context menu</li>
+                                    <li>Click "Open" in the security dialog</li>
+                                </ul>
+                            </li>
+                            <li><strong>If that fails</strong> - System Preferences:
+                                <ul>
+                                    <li>Go to System Settings → Privacy & Security → General</li>
+                                    <li>Look for the FudiFox block message</li>
+                                    <li>Click "Open Anyway"</li>
+                                </ul>
+                            </li>
+                            <li><strong>Last resort</strong> - Disable Gatekeeper temporarily:
+                                <pre># Disable Gatekeeper
+sudo spctl --master-disable
+
+# Open FudiFox once
+open /Applications/FudiFox.app
+
+# Re-enable Gatekeeper (recommended for security)
+sudo spctl --master-enable</pre>
+                            </li>
+                        </ol>
+
+                        <h4>Why This Happens</h4>
+                        <p>Apple requires apps distributed outside the Mac App Store to be code-signed with a valid Developer ID ($99/year) and notarized by Apple's notarization service. FudiFox is currently unsigned to keep it free and open-source.</p>
+                    </div>
                 </div>
 
                 <div class="guide-section">
